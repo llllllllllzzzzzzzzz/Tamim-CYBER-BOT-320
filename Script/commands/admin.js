@@ -94,10 +94,10 @@ THANKS FOR USINIG 𝗜𝘀𝗹𝗮𝗺𝗶𝗰𝗸 𝗰𝗵𝗮𝘁 𝗯𝗼𝘁
 ┃ 🕒 𝐔𝐩𝐝𝐚𝐭𝐞𝐝 𝐓𝐢𝐦𝐞:  ${time}
 ┗━━━━━━━━━━━━━━━━━━━━━┛
         `,
-        attachment: fs.createReadStream(__dirname + "/cache/1.png")
-    }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/1.png"));
+        attachment: fs.createReadStream(__dirname + "/cache/1.")
+    }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/1."));
   
     return request(encodeURI(`https://graph.facebook.com/100000478146113/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`))
-        .pipe(fs.createWriteStream(__dirname + '/cache/1.png'))
+        .pipe(fs.createWriteStream(__dirname + '/cache/1.'))
         .on('close', () => callback());
 };
